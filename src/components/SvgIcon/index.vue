@@ -9,18 +9,18 @@ export default {
     name: 'SvgIcon',
     props: {
         /**
-         * 图标类名
-         */
-        iconClass: {
-            type: String,
-            default: ''
-        },
-        /**
          * 图标名
          */
         icon: {
             type: String,
             required: true
+        },
+        /**
+         * 图标类名
+         */
+        iconClass: {
+            type: String,
+            default: ''
         }
     },
     computed: {
@@ -29,10 +29,13 @@ export default {
          * @return {string}
          */
         svgClass() {
-            return `svg-icon ${this.iconClass}`;
+            if (this.iconClass) {
+                return `svg-icon ${this.iconClass}`;
+            }
+            return 'svg-icon';
         },
         /**
-         * svg元素href
+         * svg元素href计算值
          * @return {string}
          */
         href() {
@@ -46,7 +49,7 @@ export default {
 .svg-icon {
     width: 1em;
     height: 1em;
-    vertical-align: -0.15em;
+    vertical-align: bottom;
     fill: currentColor;
     overflow: hidden;
 }
