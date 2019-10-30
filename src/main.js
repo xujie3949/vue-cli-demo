@@ -1,3 +1,5 @@
+import 'normalize.css';
+
 import Vue from 'vue';
 import Element from 'element-ui';
 import Components from '@/components';
