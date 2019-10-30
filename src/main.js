@@ -1,4 +1,6 @@
 import 'normalize.css';
+import '@/theme/index.css';
+import '@/styles/index.scss';
 
 import Vue from 'vue';
 import Element from 'element-ui';
