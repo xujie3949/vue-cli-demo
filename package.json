@@ -7,7 +7,7 @@
     "test": "vue-cli-service serve --mode test",
     "uat": "vue-cli-service serve --mode uat",
     "master": "vue-cli-service serve --mode master",
-    "build-dev": "vue-cli-service build --mode dev --report",
+    "build-dev": "vue-cli-service build --mode dev",
     "build-test": "vue-cli-service build --mode test",
     "build-uat": "vue-cli-service build --mode uat",
     "build-master": "vue-cli-service build --mode master",
