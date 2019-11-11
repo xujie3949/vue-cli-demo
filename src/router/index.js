@@ -1,18 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Layout from '@/layout';
-import home from '@/router/modules/home';
-import system from '@/router/modules/system';
+// import Layout from '@/layout';
+// import home from '@/router/modules/home';
+// import system from '@/router/modules/system';
 
 Vue.use(VueRouter);
 
 const routes = [
-    {
-        path: '/',
-        name: 'root',
-        component: Layout,
-        children: [home, system]
-    },
+    // {
+    //     path: '/',
+    //     name: 'root',
+    //     component: Layout,
+    //     children: [home, system]
+    // },
     {
         path: '/login',
         name: 'login',

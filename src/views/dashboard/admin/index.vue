@@ -63,14 +63,14 @@
 
 <script>
 import GithubCorner from '@/components/GithubCorner';
-import PanelGroup from '@/dashboard/admin/components/PanelGroup';
-import LineChart from '@/dashboard/admin/components/LineChart';
-import RaddarChart from '@/dashboard/admin/components/RaddarChart';
-import PieChart from '@/dashboard/admin/components/PieChart';
-import BarChart from '@/dashboard/admin/components/BarChart';
-import TransactionTable from '@/dashboard/admin/components/TransactionTable';
-import TodoList from '@/dashboard/admin/components/TodoList';
-import BoxCard from '@/dashboard/admin/components/BoxCard';
+import PanelGroup from './components/PanelGroup';
+import LineChart from './components/LineChart';
+import RaddarChart from './components/RaddarChart';
+import PieChart from './components/PieChart';
+import BarChart from './components/BarChart';
+import TransactionTable from './components/TransactionTable';
+import TodoList from './components/TodoList';
+import BoxCard from './components/BoxCard';
 
 const lineChartData = {
     newVisitis: {

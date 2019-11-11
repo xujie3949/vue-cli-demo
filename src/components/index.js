@@ -1,9 +1,10 @@
 import SvgIcon from '@/components/SvgIcon';
+import ResizePanel from '@/components/ResizePanel';
 
 /**
  * 组件数组
  */
-const components = [SvgIcon];
+const components = [SvgIcon, ResizePanel];
 
 /**
  * 实现install方法

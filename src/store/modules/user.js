@@ -1,4 +1,4 @@
-import userSerive from '@/api/user';
+import userService from '@/api/userService';
 
 // 用户模块状态
 const state = {
@@ -78,14 +78,14 @@ const actions = {
      * 用户登录
      */
     async login({ commit }, userInfo) {
-        const { data } = await userSerive.login(userInfo);
+        const { data } = await userService.login(userInfo);
         commit('SET_TOKEN', data.token);
     },
     /**
      * 获取用户信息
      */
     async getInfo({ commit, state }) {
-        const { data } = await userSerive.getInfo(state.token);
+        const { data } = await userService.getInfo(state.token);
 
         if (!data) {
             throw new Error('获取用户信息失败,请重新登录!');
@@ -121,7 +121,7 @@ const actions = {
      * 用户登出
      */
     async logout({ commit, state, dispatch }) {
-        await userSerive.logout(state.token);
+        await userService.logout(state.token);
 
         // 重置用户信息
         dispatch('resetInfo');
@@ -149,7 +149,7 @@ const actions = {
      */
     async changeRoles({ commit, state, dispatch }, roles) {
         // 改变用户拥有的角色
-        await userSerive.changeRoles(roles);
+        await userService.changeRoles(roles);
 
         // 重新获取用户信息
         await dispatch('getInfo');

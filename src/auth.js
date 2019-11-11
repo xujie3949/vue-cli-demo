@@ -18,7 +18,7 @@ router.beforeEach(async (to, from, next) => {
         // 白名单中的地址无需进行身份认证
         next();
     } else {
-        notInWhileList(next);
+        notInWhileList(to, from, next);
     }
 });
 
@@ -35,7 +35,7 @@ router.afterEach(() => {
  */
 function notInWhileList(to, from, next) {
     // 获取token
-    const token = store.user.token;
+    const token = store.state.user.token;
     if (token) {
         hasToken(next);
     } else {
@@ -56,7 +56,7 @@ function hasToken(to, from, next) {
         next({ path: '/' });
     } else {
         // 验证是否有路由权限
-        const routes = store.user.routes;
+        const routes = store.state.user.routes;
         if (routes.some(route => route === to.fullPath)) {
             // 如果有路由权限,跳转到对应页面
             next();

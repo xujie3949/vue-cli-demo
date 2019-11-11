@@ -9,8 +9,8 @@ import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store';
 
-import '@/auth';
 import '@/icons';
+import '@/auth';
 
 Vue.config.productionTip = false;
 

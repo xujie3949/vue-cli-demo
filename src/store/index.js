@@ -5,13 +5,13 @@ import VuexPersistence from 'vuex-persist';
 Vue.use(Vuex);
 
 // 导入modules文件夹下面所有文件
-const modulesFiles = require.context('@/store/modules', true, /\.js$/);
+const modulesFiles = require.context('./modules', true, /\.js$/);
 
 // 将每一个文件作为模块导入
 const modules = {};
 modulesFiles.keys().forEach(modulePath => {
     // 根据路径生成模块名 './app.js' => 'app'
-    const moduleName = modulePath.replace(/^@\/(.*)\.\w+$/, '$1');
+    const moduleName = modulePath.replace(/^.\/(.*)\.\w+$/, '$1');
     const value = modulesFiles(modulePath);
     modules[moduleName] = value.default;
 });
